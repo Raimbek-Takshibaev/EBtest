@@ -21,7 +21,7 @@ namespace Test.Models
                 if(num < 1 || num > 100)
                     return new TaskResult() { IsGood = false, Result = "The number must be between 1 and 100" };
                 string result = "";
-                if (num < 21)
+                if (num < 20)
                     result = SmallFactorial(num).ToString();
                 else
                     result = BigFactorial(num);
