@@ -22,7 +22,7 @@ namespace Test.Models
                     return new TaskResult() { IsGood = false, Result = "The number must be between 1 and 100" };
                 string result = "";
                 if (num < 20)
-                    result = SmallFactorial(num).ToString();
+                    result = SmallFactorial((ulong)num).ToString();
                 else
                     result = BigFactorial(num);
                 return new TaskResult() { IsGood = true, Result = result };
@@ -32,7 +32,7 @@ namespace Test.Models
                 return new TaskResult() { IsGood = false, Result = "The text in the file must be natural number" };
             }
         }
-        public int SmallFactorial(int num)
+        public ulong SmallFactorial(ulong num)
         {
             if (num == 0)
                 return 1;
